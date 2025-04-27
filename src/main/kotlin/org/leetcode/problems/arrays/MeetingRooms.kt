@@ -1,6 +1,8 @@
 package org.leetcode.problems.arrays
 
 /**
+ * EASY DIFFICULTY
+ *
  * ? THOUGHT PROCESS:
  * * I don't need to remember EVERY past meeting interval here, but rather, just compare end time of the previous
  * * meeting to the start time of the current meeting.

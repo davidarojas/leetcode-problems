@@ -1,6 +1,8 @@
 package org.leetcode.problems.arrays
 
 /**
+ * EASY DIFFICULTY
+ *
  * ? THOUGHT PROCESS:
  * Instantly, the first solution that came to mind was to use a hash map to count the number of times each number
  * appears in the list.

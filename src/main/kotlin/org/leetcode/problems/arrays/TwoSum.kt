@@ -1,6 +1,7 @@
 package org.leetcode.problems.arrays
 
 /**
+ * EASY DIFFICULTY
  *
  * ? THOUGHT PROCESS:
  * * This is about finding a relationship between two numbers in an array, to see if they add up to a target value. This may

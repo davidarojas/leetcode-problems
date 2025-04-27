@@ -1,6 +1,8 @@
 package org.leetcode.problems.arrays
 
 /**
+ * EASY DIFFICULTY
+ *
  * ? THOUGHT PROCESS:
  * * Immediately, my first thought was either hash map or hash set, because here I need to check what I have already
  * * seen in the array, to check if I have duplicates. This is different from using variables because I need to keep

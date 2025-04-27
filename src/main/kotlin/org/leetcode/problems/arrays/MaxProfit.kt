@@ -1,6 +1,8 @@
 package org.leetcode.problems.arrays
 
 /**
+ * EASY DIFFICULTY
+ *
  * ? THOUGHT PROCESS:
  * * It's not about finding a relationship between values in the last, but rather about TRACKING the lowest buy price
  * * and the maximum profit.
