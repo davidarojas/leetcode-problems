@@ -1,21 +1,22 @@
 package org.leetcode.problems.arrays
 
 /**
- * ? THOUGHT PROCESS: ?
+ * ? THOUGHT PROCESS:
  * Instantly, the first solution that came to mind was to use a hash map to count the number of times each number
- * appears in the list. This was a good O(n) time complexity solution with O(n) space complexity since I keep adding +1
- * to the hash map for each number I see.
+ * appears in the list.
+ *
+ * This was a good O(n) time complexity solution with O(n) space complexity since I keep adding +1 to the hash map for each number I see.
  *
  * * HOWEVER, I found out there was an even BETTER O(1) space complexity solution using the Boyer-Moore Voting Algorithm.
  * * This is because this problem is about tracking dominance over time (like an election), to see which number along
  * * the way has the most occurrences. This is more about tracking than looking at the past values.
  *
- * ! PATTERN: Map not needed if verification isn't important - just COUNT and then track the dominant value !
+ * ! PATTERN: Map not needed if verification isn't important - just COUNT and then track the dominant value
  *
- * i.e. nums = [2,2,1,1,1,2,2
- * */
+ * i.e. nums = [2,2,1,1,1,2,2]
+ */
 class MajorityElement {
-    fun majorityElement(nums: IntArray): Int {
+    fun main(nums: IntArray): Int {
         // ! 1st solution - Hash Map
 //        val hashMap = HashMap<Int, Int>()
 //
