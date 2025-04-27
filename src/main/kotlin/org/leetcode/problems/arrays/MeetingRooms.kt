@@ -17,10 +17,12 @@ package org.leetcode.problems.arrays
 class MeetingRooms {
     fun main(intervals: List<Interval?>): Boolean {
         // Sort is NEEDED to organize the meeting times properly
-        val sortedIntervals = intervals.sortedBy { it?.start }
+        intervals.sortedBy { it?.start }
 
-        for (i in 1 until sortedIntervals.size) {
-            if (intervals[i]!!.start < intervals[i - 1]!!.end) {
+        for (i in 1 until intervals.size) {
+            val previousEnd = intervals[i - 1]!!.end
+
+            if (intervals[i]!!.start < previousEnd) {
                 return true
             }
         }
