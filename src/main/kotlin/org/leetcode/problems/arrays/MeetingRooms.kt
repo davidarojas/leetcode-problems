@@ -29,12 +29,4 @@ class MeetingRooms {
     }
 }
 
-class Interval {
-    var start: Int = 0
-    var end: Int = 0
-
-    constructor(start: Int, end: Int) {
-        this.start = start
-        this.end = end
-    }
-}
+data class Interval(val start: Int, val end: Int)
