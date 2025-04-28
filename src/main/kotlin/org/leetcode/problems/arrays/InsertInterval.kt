@@ -14,7 +14,8 @@ package org.leetcode.problems.arrays
  * - will also make use of Math.min() / Math.max() to merge start/end values easily, choosing the right value between
  * - the new interval and the current interval
  *
- * ! PATTERN: For each interval, if no overlap before, add current interval. If no overlap after, add new interval.
+ * ! PATTERN: For intervals, I'll need to loop through them and compare start and end boundaries.
+ * ! If no overlap before, add current interval. If no overlap after, add new interval.
  * ! If overlapped, merge intervals by choosing the MIN start and MAX end between the two intervals.
  *
  * Overlap conditions:
@@ -34,7 +35,7 @@ class InsertInterval {
             } else if (interval[0] > mutableNewInterval[1]) {
                 // Current interval starts AFTER new interval ends - no overlap, add new interval
                 result.add(newInterval)
-                // Update new interval to track current interval that wasn't inserted
+                // Update new interval to track current interval that wasn't inserted (next candidate)
                 mutableNewInterval = interval
             } else {
                 // Overlapping intervals - merge them by choosing the MIN start and MAX end between the two intervals
@@ -43,6 +44,7 @@ class InsertInterval {
             }
         }
 
+        // Add any pending new interval
         result.add(mutableNewInterval)
         return result.toTypedArray()
     }
